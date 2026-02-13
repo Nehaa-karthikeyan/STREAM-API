@@ -49,5 +49,18 @@ public class StreamDemo {
                 .max(Integer::compareTo)
                 .orElse(null);
         System.out.println(maxEven);
+
+        // UC 2.7
+        int sum = numbers.stream()
+                .mapToInt(n -> n)
+                .sum();
+        System.out.println(sum);
+
+        double average = numbers.stream()
+                .mapToInt(n -> n)
+                .average()
+                .orElse(0);
+        System.out.println(average);
     }
 }
+

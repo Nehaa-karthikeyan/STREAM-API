@@ -22,8 +22,14 @@ public class StreamDemo {
         List<Integer> doubledList = numbers.stream()
                 .map(n -> n * 2)
                 .collect(Collectors.toList());
-
         System.out.println(doubledList);
+
+        // UC 2.4
+        List<Integer> evenNumbers = numbers.stream()
+                .filter(n -> n % 2 == 0)
+                .collect(Collectors.toList());
+        System.out.println(evenNumbers);
     }
 }
+
 

@@ -70,6 +70,12 @@ public class StreamDemo {
         boolean anyEven = numbers.stream()
                 .anyMatch(n -> n % 2 == 0);
         System.out.println(anyEven);
+
+        // UC 2.9
+        List<Integer> sortedNumbers = numbers.stream()
+                .sorted()
+                .collect(Collectors.toList());
+        System.out.println(sortedNumbers);
     }
 }
 

@@ -61,6 +61,15 @@ public class StreamDemo {
                 .average()
                 .orElse(0);
         System.out.println(average);
+
+        // UC 2.8
+        boolean allEven = numbers.stream()
+                .allMatch(n -> n % 2 == 0);
+        System.out.println(allEven);
+
+        boolean anyEven = numbers.stream()
+                .anyMatch(n -> n % 2 == 0);
+        System.out.println(anyEven);
     }
 }
 

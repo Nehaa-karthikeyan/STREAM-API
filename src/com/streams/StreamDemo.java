@@ -36,5 +36,18 @@ public class StreamDemo {
                 .findFirst()
                 .orElse(null);
         System.out.println(firstEven);
+
+        // UC 2.6
+        Integer minEven = numbers.stream()
+                .filter(n -> n % 2 == 0)
+                .min(Integer::compareTo)
+                .orElse(null);
+        System.out.println(minEven);
+
+        Integer maxEven = numbers.stream()
+                .filter(n -> n % 2 == 0)
+                .max(Integer::compareTo)
+                .orElse(null);
+        System.out.println(maxEven);
     }
 }
